@@ -25,7 +25,7 @@ def get_country(city_name):
             'format': 'json'
         }
         data = requests.get(url, params).json()
-        # все отличие тут, мы получаем имя страны
+
         return data['response']['GeoObjectCollection'][
             'featureMember'][0]['GeoObject']['metaDataProperty'][
             'GeocoderMetaData']['AddressDetails']['Country']['CountryName']
